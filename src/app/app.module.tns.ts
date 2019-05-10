@@ -3,7 +3,10 @@ import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './views/mobile/home/home.component.tns';
+import { TopBarComponent } from './views/mobile/top-bar/top-bar.component.tns';
+import { LeftSideBarComponent } from './views/mobile/left-side-bar/left-side-bar.component.tns';
+import { PostPanelComponent } from './views/mobile/post-panel/post-panel.component.tns';
 
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
@@ -16,6 +19,9 @@ import { HomeComponent } from './home/home.component';
   declarations: [
     AppComponent,
     HomeComponent,
+    TopBarComponent,
+    LeftSideBarComponent,
+    PostPanelComponent,
   ],
   imports: [
     NativeScriptModule,

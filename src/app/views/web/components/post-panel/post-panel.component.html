@@ -1,0 +1,77 @@
+<div class="post-panel" *ngFor="let post of posts">
+  <div class="post-header">
+    <img class="avt" [src]="post.author.avt">
+    <span class="post-info">
+      <span class="post-author">
+        <a href="#">
+          <span>{{ post.author.name }}</span>
+        </a>
+      </span>
+      <span class="small text-muted">
+        {{ post.time }}
+        <i class="fa fa-globe"></i>
+      </span>
+    </span>
+  </div>
+  <div class="post-content">
+    {{ post.content }}
+  </div>
+  <div class="post-reaction small text-muted">
+    <span class="reaction-icons">
+      <span class="react-list">
+        <div class="react-tile"></div>
+      </span>
+      <span>{{ post.reactions[0] }} and {{ post.reactions.length - 1 }} others</span>
+    </span>
+    <span>
+      {{ post.comments.length }} comments
+    </span>
+  </div>
+  <hr class="post-divider" />
+  <div class="post-actions">
+    <button class="form-control btn act-btn">
+      <i class="fa fa-thumbs-up"></i>
+      <span>Like</span>
+    </button>
+    <button class="form-control btn act-btn">
+      <i class="fa fa-comment"></i>
+      <span>Comment</span>
+    </button>
+    <button class="form-control btn act-btn">
+      <i class="fa fa-share"></i>
+      <span>Share</span>
+    </button>
+  </div>
+  <hr class="post-divider" />
+  <div class="post-commentation" *ngFor="let cmt of post.comments">
+    <div class="cmt-item">
+      <img class="cmt-avt" [src]="cmt.author.avt">
+      <span class="cmt-info">
+        <span class="cmt-author">
+          <a class="cmt-name" href="#">
+            <span>
+              {{ cmt.author.name }}
+            </span>
+
+          </a>
+          <span class="cmt-content">
+            {{ cmt.content }}
+          </span>
+        </span>
+        <span class="small cmt-actions">
+          <span class="cmt-act">
+            <a href="#">
+              Like
+            </a>
+          </span>
+          <span class="cmt-act">
+            <a href="#">Reply</a>
+          </span>
+          <span class="text-muted cmt-act">
+            {{ cmt.time }}
+          </span>
+        </span>
+      </span>
+    </div>
+  </div>
+</div>

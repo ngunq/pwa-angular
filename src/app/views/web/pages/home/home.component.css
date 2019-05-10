@@ -1,0 +1,15 @@
+
+
+.wrapper {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+
+.main {
+  width: 35rem;
+  /* margin-left: 16rem; */
+  padding: .5rem .5rem;
+}
