@@ -1,0 +1,51 @@
+.left-sidebar {
+    height: 100%;
+    width: 16rem;
+    font-size: 90%;
+    padding: 0 1rem 0 2rem;
+    /* border-right: solid 1px #ccc; */
+    /* position: fixed; */
+}
+
+.left-sidebar img {
+    max-width: 1.25rem;
+    max-height: 1.25rem;
+    border-radius: 50%;
+}
+
+.menu-item {
+    cursor: pointer;
+    padding: .3rem;
+}
+
+.menu-item:hover, .active {
+    border: solid 1px #ccc;
+    background-color: #f5f6f7;
+    font-weight: bold;
+}
+
+.menu-item .icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    background-image: url("../../../../assets/icons/fb-icons.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.menu-item .icon-news-feed {
+    background-position: 0 -497px;
+}
+
+.menu-item .icon-messenger {
+    background-position: -104px -369px;
+}
+
+.menu-item .icon-video-on-watch {
+    background-position: 0 -560px;
+}
+
+.menu-item .icon-market-place {
+    background-position: -105px -476px;
+}

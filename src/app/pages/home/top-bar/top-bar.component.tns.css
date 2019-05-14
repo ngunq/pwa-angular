@@ -1,0 +1,30 @@
+/* Add mobile styles for the component here.  */
+
+.bottom-navigation {
+    height: 50;
+    text-align: center;
+    background-color: #ffffff;
+    border-top-color: #dae1e7;
+    border-top-width: 1;
+}
+
+.bottom-navigation .bottom-navigation-item .fas, .bottom-navigation .bottom-navigation-item .label {
+    color: #C1C1C1;
+}
+
+.bottom-navigation .bottom-navigation-item .fas {
+    font-size: 20;
+    margin-bottom: 2;
+}
+
+.bottom-navigation .bottom-navigation-item .label {
+    font-size: 10;
+}
+
+.bottom-navigation .bottom-navigation-item.selected .fas, .bottom-navigation .bottom-navigation-item.selected .label {
+    color: blue;
+}
+
+.bottom-navigation GridLayout {
+    margin: 10;
+}

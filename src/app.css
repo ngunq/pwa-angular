@@ -1,2 +1,36 @@
- 
-@import '~nativescript-theme-core/css/core.light.css';
+ @import '~nativescript-theme-core/css/core.light.css';
+ .page {
+     font-size: 16;
+     background-color: #e9ebee !important;
+ }
+
+ .small {
+     font-size: 12;
+ }
+
+ .action-bar {
+     background-color: #f1f5f8;
+     border-width: 1;
+     border-color: transparent;
+ }
+
+ .action-bar .action-item {
+     color: black;
+ }
+
+ .action-bar .action-bar-title {
+     color: #3d4852;
+     font-size: 20;
+ }
+
+ .fas {
+     font-family: "FontAwesome, fa-solid-900";
+ }
+
+ .far {
+     font-family: "FontAwesome, fa-regular-400";
+ }
+
+ .fab {
+     font-family: "FontAwesome, fa-brands-400";
+ }

@@ -1,0 +1,44 @@
+<GridLayout rows="auto, auto, auto, auto, auto, auto, *" backgroundColor="white" class="p-16 m-t-8"
+    *ngFor="let post of posts">
+    <GridLayout row="0" columns="auto, auto" class="m-b-8">
+        <StackLayout col="0" verticalAlignment="center" class="m-r-8">
+            <Image [src]="post.author.avt" class="post-author-image" width="40" height="40"></Image>
+        </StackLayout>
+        <StackLayout col="1" verticalAlignment="center">
+            <Label [text]="post.author.name" class="post-author-name"></Label>
+            <Label [text]="post.time + ' &bull; &#xf0ac;'" class="post-time small text-muted fas"></Label>
+        </StackLayout>
+    </GridLayout>
+    <StackLayout row="1" class="m-b-8">
+        <Label [text]="post.content" textWrap="true"></Label>
+    </StackLayout>
+    <FlexboxLayout row="2" justifyContent="space-between" class="m-b-8">
+        <GridLayout columns="auto, auto">
+            <Image col="0" width="16" height="16" class="reaction-tile m-r-5"></Image>
+            <Label col="1" [text]="post.reactions[0]" class="small text-muted"></Label>
+        </GridLayout>
+        <Label [text]="post.comments.length + ' comments'" class="small text-muted"></Label>
+    </FlexboxLayout>
+    <StackLayout row="3" class="hr-light"></StackLayout>
+    <FlexboxLayout row="4" justifyContent="space-between" class="post-action-group">
+        <Button text="&#xf164; Like" class="btn post-action fas"> </Button>
+        <Button text="&#xf086; Comment" class="btn post-action fas"> </Button>
+        <Button text="&#xf064; Share" class="btn post-action fas"> </Button>
+    </FlexboxLayout>
+    <StackLayout row="5" class="hr-light m-b-8"></StackLayout>
+    <ScrollView row="6">
+        <StackLayout *ngFor="let cmt of post.comments">
+            <GridLayout columns="auto, *">
+                <StackLayout col="0" verticalAlignment="center" class="m-r-8">
+                    <Image [src]="cmt.author.avt" class="cmt-author-image" width="36" height="36"></Image>
+                </StackLayout>
+                <StackLayout col="1" verticalAlignment="center" class="cmt-part">
+                    <Label [text]="cmt.author.name" class="cmt-author-name p-t-4"></Label>
+                    <Label [text]="cmt.content" textWrap="true" class="cmt-content"></Label>
+                </StackLayout>
+            </GridLayout>
+        </StackLayout>
+
+    </ScrollView>
+
+</GridLayout>
